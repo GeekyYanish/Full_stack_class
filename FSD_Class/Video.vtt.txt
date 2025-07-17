@@ -1,0 +1,7 @@
+WEBVTT
+
+00:00:00.500 --> 00:00:05.000:middle line:90%
+<i>This is very short video where vtt is being applied</i>
+
+00:00:05.000 --> 00:00:07.000:middle line
+<i>Thank you</i>

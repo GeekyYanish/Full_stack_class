@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="displayMsg()" id="greetBtn">Click Me</button>
+    <br>
+    <form id="contactForm">
+        <label>
+        Name:
+        <input type="text" id="nameInput" required>
+        </label><br><br>
+        <label>
+        Email:
+        <input type="email" id="emailInput" required>
+         <p>You typed: <span id="output"></span></p>
+        </label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        //Click Event
+        function displayMsg(){
+            alert("This is Click Event");
+        }
+
+        //mouseover event
+        const button = document.getElementById("greetBtn");
+        function greetUser() {
+        alert("Hello, This is mouseover");
+        }
+        button.addEventListener("mouseover", greetUser);
+
+        //window event
+        window.addEventListener("load", function() {
+        alert("Page fully loaded!");
+        });
+
+        //form events
+        const form = document.getElementById("contactForm");
+        const nameInput = document.getElementById("nameInput");
+        const emailInput = document.getElementById("emailInput");
+        const output = document.getElementById("output");
+        
+        form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        alert("Form submitted!");
+        });
+
+        nameInput.addEventListener("focus", function() {
+        console.log("Name field focused");
+        });
+
+        nameInput.addEventListener("blur", function() {
+        console.log("Name field blured");
+        });
+
+        emailInput.addEventListener("keyup", function(event) {
+        output.textContent = emailInput.value;
+        console.log("Key released:", event.key);
+        });
+
+
+    </script>
+</body>
+
+</html>

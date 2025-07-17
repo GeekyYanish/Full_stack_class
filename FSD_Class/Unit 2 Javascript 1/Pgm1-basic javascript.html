@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic HTML5 Structure</title>
+    </head>
+    <body>
+        
+        <script>
+            /*
+            //variables let var const
+             let x=2;
+            document.write("before block",x);
+            {
+                let x=4;
+                document.write("inside block",x);
+            }
+            document.write("<br> after block",x);
+
+            const pi=3;
+            //pi=4;
+        
+
+        //Data type number, string, boolean
+        x="sting";
+        y=2.3;
+        q=true;
+
+        document.write(typeof(q));
+
+    // Array object:
+    const subj = ["C", "C++", "Python"];
+    
+    // Date object
+    const date = new Date("2025-07-02");
+
+    //object
+    const person = {firstName:"John", lastName:"Doe"};
+    document.write("<br>",person.firstName)
+    person.firstName="Joe"
+    document.write("<br>",person.firstName)  
+   
+    //function
+    function add(a,b){
+        return a+b;
+    }
+    let sum=add(2,3);
+    document.write("<br>",sum);
+
+    //object method
+    const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function() {
+            return this.firstName + " " + this.lastName;
+        }
+    };
+
+    document.write("<br>",person.fullName());
+
+    //Modify object
+            person.firstName="Harry"
+            delete person.lastName;
+
+
+*/
+
+            //Array
+            const subj = ["C", "C++", "Python"];
+
+            const subja=[];
+            subja[0]="c";
+            subja[1]="C++"
+        
+            const subjs = new Array("C", "C++", "Python");
+            document.write(subjs);
+
+            document.write("<br>", subjs.length);
+
+            //push pop shift unshift
+            let length = subj.push("Fullstack");
+            document.write("<br>",length);
+            document.write("<br>",subj);
+
+            subj.unshift("java")
+            document.write("<br>",subj);
+
+            document.write("<br>",subj.pop());
+             document.write("<br>",subj.shift());
+
+             // Create a student object
+                const student = {
+                name: "Ashwini",
+                age: 20
+                };
+
+                // Check voting eligibility
+                if (student.age >= 18) {
+                console.log(`${student.name} is eligible to vote.`);
+                } else {
+                console.log(`${student.name} is not eligible to vote.`);
+                }
+
+                /*if()
+                 elseif()
+                 else*/
+
+
+                  /*switch(expression) {
+                    case x:
+                        // code block
+                        break;
+                    case y:
+                        // code block
+                        break;
+                    default:
+                        // code block
+                    }
+                        */
+
+                for(let i=0;i<10;i++){
+                    document.write(i);
+                }
+
+                for(x in subj){
+                    document.write(subj[x]);
+                }
+
+
+                
+        </script>
+    </body>
+</html>

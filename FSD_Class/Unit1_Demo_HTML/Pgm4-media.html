@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Audio and Video Example</title>
+</head>
+<body>
+    <h1>HTML5 Audio and Video Demo</h1>
+
+    <!-- Audio Element -->
+    <h2>Audio Example 1</h2>
+     <audio src="audio.mp3" controls>
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Audio Example 2</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    
+
+    <!-- Video Element -->
+    <h2>Video Example 1</h2>
+    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" controls autoplay muted loop width="600">
+        Your browser does not support the video element.
+    </video>
+
+    <h2>Video Example 2</h2>
+    <video controls width="600" poster="https://www.bitdegree.org/learn/storage/media/images/de63e0dd-5287-4871-aac2-4aeb7678759e.jpg">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        Your browser does not support the video element.
+    </video>
+
+</body>
+</html>

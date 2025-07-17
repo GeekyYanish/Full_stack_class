@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Circle Animation</title>
+    <style>
+        #myCanvas{
+            position: absolute;
+            background-color: antiquewhite;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        let x = 50; 
+        let y = canvas.height / 2; 
+        let dx = 2; 
+
+        /*
+        ctx.fillStyle="black";
+        ctx.fillRect(10,10,50,50);
+
+         
+        ctx.beginPath();
+        ctx.arc(x, y, 50, 0, Math.PI * 2); // Draw circle
+        ctx.fillStyle = "red"; 
+        ctx.fill();
+        ctx.closePath();
+        */
+       
+        function drawCircle() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+            ctx.beginPath();
+            ctx.arc(x, y, 40, 0, Math.PI * 2); // Draw circle
+            ctx.fillStyle = "blue"; 
+            ctx.fill();
+            ctx.closePath();
+            x += dx; // Move circle
+            if (x + 40 > canvas.width || x - 40 < 0) {
+                dx = -dx; // Reverse direction on collision
+            }
+            requestAnimationFrame(drawCircle);
+        }
+        drawCircle();
+        
+       
+        const data = [100, 60, 80];
+        const colors = ['#4CAF50', '#FFC107', '#2196F3'];
+
+        data.forEach((value, index) => {
+            ctx.fillStyle = colors[index];
+            ctx.fillRect(50 + index * 60, 200 - value, 40, value); // x, y, width, height
+        }); 
+        
+    </script>
+</body>
+</html>

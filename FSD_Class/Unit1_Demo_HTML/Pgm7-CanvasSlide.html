@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas Image Slideshow</title>
+</head>
+<body>
+  <h3>Canvas Image Slideshow</h3>
+  <canvas id="slideshow" width="300" height="200" style="border:1px solid #999;"></canvas>
+
+  <script>
+    const canvas = document.getElementById('slideshow');
+    const ctx = canvas.getContext('2d');
+
+    // ✅ Replace with working image URLs
+    const images = [
+      'https://picsum.photos/id/237/300/200',  // Dog
+      'https://picsum.photos/id/238/300/200',  // Forest
+      'https://picsum.photos/id/239/300/200'   // Mountain
+    ];
+
+    let current = 0;
+    const img = new Image();
+
+    function showImage() {
+      img.src = images[current];
+      img.onload = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        current = (current + 1) % images.length;
+        setTimeout(showImage, 2000); // Change every 2 seconds
+      };
+    }
+
+    showImage();
+  </script>
+</body>
+</html>

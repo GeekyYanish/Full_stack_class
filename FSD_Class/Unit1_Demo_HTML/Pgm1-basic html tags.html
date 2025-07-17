@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic HTML5 Structure</title>
+    </head>
+    <body>
+        <!--Headings-->
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <!--Paragraph-->
+        <p>Hello World!</p>
+
+         <!--Div-->
+        <div>
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+            <p>London has over 9 million inhabitants.</p>
+        </div>
+
+        <!--Formatting-->
+        <b> Bold text</b>
+        <strong> Important text</strong>
+        <i> Italic text</i>
+        <em> Emphasized text</em>
+        <mark> Marked text</mark>
+        <small> Smaller text</small>
+        <del> Deleted text</del>
+        <ins> Inserted text</ins>
+        <sub> Subscript text</sub>
+        <sup> Superscript text</sup>
+
+        <br>
+        <!--Image tag-->
+        <img src="tulip.jpg" alt="Italian Trulli" width="200px" height="200px">
+        <img src="https://www.cmsdrupal.com/static/c26fcd13e536c4281d4bfe14df52a551/6a8a9/html5-cool-things-you-can-do.jpg" alt="alternatetext">
+
+        <!--Table-->
+        <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        </table>
+
+        <!--col and row span, caption, thead tbody tfoot-->
+        <table border="1">
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Maria Anders</td>
+            <td colspan="2">Alfreds Futterkiste</td>
+        </tr>
+        <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Mexico</td>
+        </tr>
+        </table>
+        <table border="1">
+            <thead>
+                <tr>
+                <th>Month</th>
+                <th>Savings</th>
+                </tr>
+            </thead>
+             <tfoot>
+                <tr>
+                <td>Sum</td>
+                <td>180</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                <td>January</td>
+                <td>100</td>
+                </tr>
+                <tr>
+                <td>February</td>
+                <td>80</td>
+                </tr>
+            </tbody>
+           
+        </table>
+         <!--Ordered list, unordered and description list-->
+        <ul>
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ul>
+
+        <ol>
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Milk</li>
+        </ol>
+
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+
+        <!--Link-->
+        <a href="https://christuniversity.in/">Visit Christ Website</a>
+    
+        <!--Form-->
+        <form action="" method="">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <!-- check box, radio button, text area-->
+            <input type="reset" value="Clear"/>
+            <input type="submit" value="Save"/>
+        </form>
+
+        
+    
+    </body>
+</html>
